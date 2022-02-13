@@ -39,7 +39,9 @@ button{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     max-height: 100%;
+    height: 100%;
 }
 
 .text{
@@ -65,7 +67,7 @@ button{
 
 .form{
     width: 28.75rem;
-    height: 90%;
+    height: 100%;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid #fff;
     border-radius: 10px;
@@ -88,7 +90,6 @@ button{
 
 .form form input,
 .form form button{
-    width: 300px;
     height: 44px;
     border-radius: 5px;
 }
@@ -104,6 +105,7 @@ button{
     font-weight: 400;
     color: #370001;
     padding: 10px;
+    width: 100%;
 }
 
 .form form .field-two{
@@ -195,4 +197,43 @@ button{
 
 .hide{
     display: none;
+}
+
+@media (max-width: 1010px){
+    .content{
+        gap: 30px
+    }
+
+    .text{
+        width: 25rem;
+    }
+}
+
+@media (max-width: 930px){
+    .text{
+        width: 15rem;
+    }
+
+    .text h3{
+        font-size: 2rem;
+    }
+
+    .text p{
+        font-size: 14px;
+    }
+
+    .form{
+        width: 60%;
+        padding: 34px 40px;
+    }
+}
+
+@media (max-width: 765px){    
+    .container{
+        height: max-content;
+    }
+
+    .form, .text{
+        width: 100%
+    }
 }
