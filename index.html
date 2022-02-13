@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Auth</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- <link rel="stylesheet" href="style/outputc.css"> -->
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="content">
+            <section class="text">
+                <h3>Whatever happens here, <span>stays</span> here</h3>
+                <p>Please fill the form on the right side.</p>
+            </section>
+
+            <section class="form">
+                <p>Login</p>
+                <form action="">
+
+                    <div class="field-one">
+                        <label for="email">Your Name</label>
+                        <input placeholder="Your Email" type="email" name="email" id="email">
+                    </div>
+
+                    <div class="field-two">
+                        <label for="password">Password</label>
+                        <input placeholder="An strong password" type="password" name="password" id="password">
+                        <a href="#">forgot password?</a>
+                    </div>
+
+
+                    <button class="submitButton" type="submit"><span>Lets Go<svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255)">
+                                <path
+                                    d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z">
+                                </path>
+                            </svg></span></button>
+
+                    <div class="social-login">
+                        <p>or login with</p>
+                        <div class="icons">
+                            <i>
+                                <img src="assets/Facebook.svg" alt="facebook icon">
+                            </i>
+                            <i>
+                                <img src="assets/Github.svg" alt="Github icon">
+                            </i>
+                            <i>
+                                <img src="assets/Google.svg" alt="google icon">
+                            </i>
+                        </div>
+                    </div>
+
+                </form>
+            </section>
+
+
+        </div>
+
+        <div class="modal hide">
+            <p>Usuário logado com sucesso</p>
+        </div>
+
+    </div>
+
+    <script type="module" src="scripts/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

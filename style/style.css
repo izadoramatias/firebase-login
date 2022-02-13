@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    max-width: 100%;
+}
+
+input{
+    outline: none;
+}
+
+body, 
+label, 
+input,
+button{
+    font-family: 'Poppins', sans-serif;
+    border: none;
+}
+
+.container{
+    height: 100%;
+    background-image: url(/assets/bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+
+    position: relative;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-height: 100%;
+}
+
+.text{
+    width: 32rem;
+    height: auto;
+}
+
+.text h3{
+    font-size: 3.375rem;
+    font-weight: 300;
+    color: #fff;
+}
+
+.text span{
+    font-weight: 700;
+}
+
+.text p{
+    font-weight: 300;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form{
+    width: 28.75rem;
+    height: 90%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 64px 80px;
+    backdrop-filter: blur(6px);
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form p {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.form form input,
+.form form button{
+    width: 300px;
+    height: 44px;
+    border-radius: 5px;
+}
+
+.form form label{
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.form form input{
+    font-size: 16px;
+    font-weight: 400;
+    color: #370001;
+    padding: 10px;
+}
+
+.form form .field-two{
+    display: flex;
+    flex-direction: column;
+}
+
+.form form .field-two a{
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    align-self: flex-end;
+    padding-top: 10px;
+}
+
+.form form button{
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #dc3845;
+    cursor: pointer;
+
+}
+
+.form form button span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form .social-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form .social-login p{
+    font-size: 14px;
+    font-weight: 300;
+    position: relative;
+}
+
+.form .social-login i{
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.form .social-login i img{
+    height: 30px;
+    width: 30px;
+    transition: transform .3s;
+}
+.form .social-login i:hover > img{
+    transform: translateY(-4px);
+}
+
+.modal{
+    height: 50%;
+    width: 30%;
+    border-radius: 10px;
+    background-color: white;
+    color: #03fc66;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+
+    font-size: 18px;
+    font-weight: 700;
+
+}
+
+.hide{
+    display: none;
+}
