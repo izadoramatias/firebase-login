@@ -126,7 +126,11 @@ button{
     color: #fff;
     background-color: #dc3845;
     cursor: pointer;
+    transition: filter ease .2s;
+}
 
+.form form button:hover{
+    filter: brightness(0.9);
 }
 
 .form form button span{
@@ -182,6 +186,7 @@ button{
     align-items: center;
     justify-content: center;
     word-wrap: break-word;
+    text-align: center;
 
     font-size: 18px;
     font-weight: 700;
