@@ -193,6 +193,9 @@ button{
     font-size: 18px;
     font-weight: 700;
 
+    -webkit-box-shadow: 14px 8px 37px -5px rgba(0,0,0,0.63); 
+    box-shadow: 14px 8px 37px -5px rgba(0,0,0,0.63);
+
 }
 
 .hide{
@@ -235,5 +238,11 @@ button{
 
     .form, .text{
         width: 100%
+    }
+
+    .modal{
+        height: 40%;
+        width: 50%;
+
     }
 }

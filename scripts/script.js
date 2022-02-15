@@ -18,6 +18,29 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
+// with email and password
+const button = document.querySelector(".submitButton")
+button.addEventListener('click', (e) => {
+    e.preventDefault()
+    signInWithEmailAndPassword(auth, email.value, password.value).then((userCredential) => {
+        //signed in
+        const user = userCredential.user;
+        const userEmail = userCredential.email;
+        const userPassword = userCredential.password;
+
+        jQuery(function ($) {
+            $(".submitButton").click(function () {
+                $(".modal").removeClass('hide')
+            })
+        })
+
+    })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+        })
+})
+
 // login with google
 const googleButton = document.querySelector(".google");
 googleButton.addEventListener('click', () => {
@@ -57,7 +80,6 @@ googleButton.addEventListener('click', () => {
                 const credential = GoogleAuthProvider.credentialFromError(error);
             })
     }
-
 })
 
 
@@ -142,29 +164,10 @@ githubButton.addEventListener('click', () => {
 })
 
 
-// with email and password
-const button = document.querySelector(".submitButton")
-button.addEventListener('click', (e) => {
-    e.preventDefault()
-    signInWithEmailAndPassword(auth, email.value, password.value).then((userCredential) => {
-        //signed in
-        const user = userCredential.user;
-        const userEmail = userCredential.email;
-        const userPassword = userCredential.password;
-
-        jQuery(function ($) {
-            $(".submitButton").click(function () {
-                $(".modal").removeClass('hide')
-            })
-        })
-
+jQuery(function ($) {
+    $(window).click(function (e) {
+        if ($(e.target).attr('class') != 'modal') {
+            $('.modal').fadeOut()
+        }
     })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-        })
-})
-
-
-
-
+}(jQuery));
